@@ -1,3 +1,3 @@
 # RESEARCH_TRACK_1
 
-First assignment in python2.
+FIRST ASSIGNMENT is: PYTHON_SIMULATOR.
