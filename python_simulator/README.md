@@ -27,10 +27,7 @@ At the end, the goal of this first assignment is to have silver and golden boxes
 
 I wrote a program where the robot searchs and grabs the nearby silver block and then the robot goes to realise it near the adjacent golden block.
 
-The Project
------------
-
-# I am going to explain my constants #
+# The constants #
 
 * a_th, threshold for the orientation.
 * d_SLVER, distance where the robot can grab the silver token.
@@ -41,7 +38,7 @@ The Project
 * listcode_token_GOLD, list for codes' of golden tokens.
 * NUMBERS_TOKEN, number of couple of tokens to take (silver + gold).
 
-# I am going to explain my functions #
+# The functions #
 
 ### drive(speed) ###
 
