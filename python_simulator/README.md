@@ -342,3 +342,11 @@ Each `Marker` object has the following attributes:
 * `timestamp`: the time at which the marker was seen (when `R.see` was called).
 
 [sr-api]: https://studentrobotics.org/docs/programming/sr/
+
+Possible Improvements
+----------------------
+
+There are many improvements to do, i think the most importat are:
+* Increase the frequency (1/time) of samples in the function "search_new_block" to be able to check better the space around the robot.
+* Increase the rapidity of the robot to be able to reduce the total time of the proces.
+* Add at the function "find_block_saw" the possibility to turn on the left or on the right, it depends of where the new token is. For instance, if the robot is in the firt half of the for loop in the function "search_new_block" the robot has to turn on the right but if the new token is in the second part it has to turn on the left (because it reduce the time to turn).
