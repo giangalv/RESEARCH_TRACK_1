@@ -290,7 +290,7 @@ At the end, the robot exits by the program.
 	exit()
 ```
 
-![My_Image](Flowchart_Asgn1_RT1.jpg).
+![My_Image](Flowchart_Asgn1_RT1.jpg "MAIN FLOWCHART").
 
 Robot API
 ---------
