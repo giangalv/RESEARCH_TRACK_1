@@ -290,7 +290,7 @@ At the end, the robot exits by the program.
 	exit()
 ```
 
-<img src="/path/to/img.jpg" alt="Alt text" title="MAIN FLOWCHART">
+![My_Image](Flowchart_Asgn1_RT1.jpg).
 
 Robot API
 ---------
