@@ -18,12 +18,18 @@ Installing and running
 Before running the program it is required to install the xterm library, if it is not already installed on the system:
 
 > sudo apt install xterm
+
+
 Now we need to run the ROS master in a separete terminal:
 
 > roscore
+
+
 We can then install the module. Go inside the root directory of your ROS workspace and run the command:
 
 > catkin_make
+
+
 Finally, launch the simulation with the roslaunch command:
 
 > roslaunch RT_assignment_2 assignment1.launch
