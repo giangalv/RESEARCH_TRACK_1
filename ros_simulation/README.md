@@ -32,4 +32,4 @@ We can then install the module. Go inside the root directory of your ROS workspa
 
 Finally, launch the simulation with the roslaunch command:
 
-> roslaunch RT_assignment_2 assignment1.launch
+> roslaunch ros_simulation assignment1.launch
