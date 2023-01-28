@@ -19,17 +19,19 @@ Before running the program it is required to install the xterm library, if it is
 
 > sudo apt install xterm
 
+We can then install the module. Go inside the root directory of your ROS workspace and run the command:
+
+> catkin_make
 
 Now we need to run the ROS master in a separete terminal:
 
 > roscore
 
-
-We can then install the module. Go inside the root directory of your ROS workspace and run the command:
-
-> catkin_make
-
-
 Finally, launch the simulation with the roslaunch command:
 
 > roslaunch ros_simulation assignment1.launch
+
+If you want to read the service's value (reached ad cancelled goals), run the command:
+
+> rosservice call /goals_srv
+
