@@ -1,23 +1,20 @@
 #! /usr/bin/env python
 
 import rospy
-
+import actionlib
+import actionlib.msg
+import ros_simulation.msg
 from ros_simulation.srv import Goals, GoalsResponse
-from ros_simulation.msg import Pos, PlanningAction, PlanningGoal, PlanningActionResult
 
-class GoalsService:
+class GoalCounter:
     def __init__(self):
         self.reached = 0
         self.cancelled = 0
-        # Initialize the node
-        rospy.init_node('goals_srv')
-        # Create the service
-        srv = rospy.Service('goals_srv', Goals, self.get_goals)
         # Subscribe to the action server
-        action = rospy.Subscriber('/reaching_goal/result', ros_simulation.msg.PlanningActionResult, self.callback)
-        # Spin
-        rospy.spin()
-
+        self.action_sub = rospy.Subscriber('/reaching_goal/result', ros_simulation.msg.PlanningActionResult, self.callback)
+        # Create the service
+        self.goals_srv = rospy.Service('goals_srv', Goals, self.get_goals)
+        
     def callback(self, data):
         # Get status of the goal
         status = data.status.status
@@ -27,13 +24,18 @@ class GoalsService:
         # If the goal is cancelled
         elif status == 2:
             self.cancelled += 1
-
+        
     def get_goals(self, req):
         # Return the response
         return GoalsResponse(self.reached, self.cancelled)
-
+    
 def main():
-    GoalsService()
+    # Initialize the node
+    rospy.init_node('goals_srv')
+    goal_counter = GoalCounter()
+    # Spin
+    rospy.spin()
 
 if __name__ == '__main__':
     main()
+
