@@ -56,28 +56,29 @@ Inside the "assignmet1.launch" launch file, you can set the value for the freque
 Action client's pseudocode [node (a)]:
 ----------------------------
 
-1. Initialize a node named "client" in ROS
-2. Create an object of class "Client"
-3. Within the class "Client":
-   - Set two variables "position" and "linear_velocity" to None
-   - Create a publisher to publish position information
-   - Create a subscriber to listen for odometry information and store the received position and linear velocity information
-   - Create an action client for the "reaching_goal" action server
-   - Wait for the action server to become usable
-   - Create a goal message for the "reaching_goal" action
-   - Create a publisher to send the target
-4. Implement the "odom_callback" function:
-   - Store the received position and linear velocity information from the odometry message
-   - Create a new message to publish the position and velocity information
-   - Publish the message
-5. Implement the "goal_input" function:
-   - Print a prompt to ask the user to insert the goal coordinates or cancel the goal
-   - Listen for user input in an infinite loop
-   - If the user inputs 'c', cancel the current goal
-   - If the user inputs is a float value, set the goal coordinates and send the goal to the action server and to the message
-   - If the input is not a float value, print an error message
-6. Call the "goal_input" function
-7. Run the node
+1. Run the node
+2. Initialize a node named "client" in ROS
+3. Create an object of class "Client"
+4. Within the class "Client":
+   * Initialization function ("__init__"):
+      - Set two variables "position" and "linear_velocity" to None
+      - Create a publisher to publish position information
+      - Create a subscriber to listen for odometry information and store the received position and linear velocity information
+      - Create an action client for the "reaching_goal" action server
+      - Wait for the action server to become usable
+      - Create a goal message for the "reaching_goal" action
+      - Create a publisher to send the target
+   * Implement the "odom_callback" function:
+      - Store the received position and linear velocity information from the odometry message
+      - Create a new message to publish the position and velocity information
+      - Publish the message
+   * Implement the "goal_input" function:
+      - Print a prompt to ask the user to insert the goal coordinates or cancel the goal
+      - Listen for user input in an infinite loop
+      - If the user inputs 'c', cancel the current goal
+      - If the user inputs is a float value, set the goal coordinates and send the goal to the action server and to the message
+      - If the input is not a float value, print an error message
+5. Call the "goal_input" function with using the object "client"
 
 Future improvement:
 -------------------
