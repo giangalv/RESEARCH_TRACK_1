@@ -39,7 +39,7 @@ Inside the "assignmet1.launch" launch file, you can set the value for the freque
 
 > param name="publish_frequency" type="double" value="number_value" 
 
-Action client's pseudocode [node(a)]:
+Action client's pseudocode [node (a)]:
 ----------------------------
 
 1. Initialize a node named "client" in ROS
