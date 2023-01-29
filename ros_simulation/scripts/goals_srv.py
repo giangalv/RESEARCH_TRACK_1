@@ -13,17 +13,21 @@ class GoalCounter:
 		# Set to zero the two variables
         self.reached = 0
         self.cancelled = 0
+        
         # Create the service to print the variables
         self.goals_srv = rospy.Service('goals_srv', Goals, self.get_goals)
+        
         # Subscribe to the action server
         self.action_sub = rospy.Subscriber('/reaching_goal/result', ros_simulation.msg.PlanningActionResult, self.callback) 
         
     def callback(self, data):
         # Get status of the goal
         status = data.status.status
+        
         # If the goal is reached
         if status == 3:
             self.reached += 1
+            
         # If the goal is cancelled
         elif status == 2:
             self.cancelled += 1
