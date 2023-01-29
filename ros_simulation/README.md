@@ -7,9 +7,9 @@ Second Assignment
 ===================
 The task of this assignment was to implement three new nodes in the robot simulation:
 
-* A node that implements an action client, allowing the user to set a target (x, y) or to cancel it. Then publish the robot position and velocity as a custom message by relying on the values published on the topic /odom;
-* A service node that, when called, prints the number of goals reached and cancelled;
-* A node that subscribes to the robot’s position and velocity (using a custom message) and prints the distance of the robot from the target and the robot’s average speed. Use a parameter to set how fast the node publishes the information.
+* A node (a) that implements an action client, allowing the user to set a target (x, y) or to cancel it. Then publish the robot position and velocity as a custom message by relying on the values published on the topic /odom;
+* A service node (b) that, when called, prints the number of goals reached and cancelled;
+* A node (c) that subscribes to the robot’s position and velocity (using a custom message) and prints the distance of the robot from the target and the robot’s average speed. Use a parameter to set how fast the node publishes the information.
 It is also required to create a launch file to start the simulation (assignment1.launch).
 
 Installing and running
@@ -35,3 +35,6 @@ If you want to read the service's value (reached ad cancelled goals), run the co
 
 > rosservice call /goals_srv
 
+Inside the "assignmet1.launch" launch file, you can set the value for the frequency with which node (c) publishes the information.
+
+> <param name="publish_frequency" type="double" value="....." />
