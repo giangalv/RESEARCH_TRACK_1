@@ -13,7 +13,7 @@ The task of this assignment was to implement three new nodes in the robot simula
 
 It is also required to create a launch file to start the simulation (assignment1.launch).
 
-Installing and running
+Installing and running:
 -----------------------
 
 Before running the program it is required to install the xterm library, if it is not already installed on the system:
