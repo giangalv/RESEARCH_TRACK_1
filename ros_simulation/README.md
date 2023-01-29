@@ -60,7 +60,7 @@ Action client's pseudocode [node (a)]:
 2. Initialize a node named "client" in ROS
 3. Create an object of class "Client"
 4. Within the class "Client":
-   * Initialization function ("__init__"):
+   * Initialization function "__init__":
       - Set two variables "position" and "linear_velocity" to None
       - Create a publisher to publish position information
       - Create a subscriber to listen for odometry information and store the received position and linear velocity information
