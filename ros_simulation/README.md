@@ -65,3 +65,7 @@ Action client's pseudocode [node (a)]:
 6. Call the "goal_input" function
 7. Run the node
 
+Future improvement:
+-------------------
+A good improvement could be to add a marker in the simulation to visualize the goal location, since it is not clear where the robot is going.
+
