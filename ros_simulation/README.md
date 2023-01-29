@@ -37,4 +37,4 @@ If you want to read the service's value (reached ad cancelled goals), run the co
 
 Inside the "assignmet1.launch" launch file, you can set the value for the frequency with which node (c) publishes the information.
 
-> <param name="publish_frequency" type="double" value="....." />
+> "<param name="publish_frequency" type="double" value="....." />"
