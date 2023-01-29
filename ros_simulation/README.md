@@ -32,6 +32,19 @@ Finally, launch the simulation with the roslaunch command:
 
 > roslaunch ros_simulation assignment1.launch
 
+Program:
+---------
+
+The program will open four windows:
+
+- *Rviz*: a tool for ROS visualization, is used for debugging and adding additional functionalities to the robot.
+- *Gazebo*: a 3D visualization environment, where the arena and the robot will be displayed.
+- *client.py*: the window where the user can input the desired target or cancel it.
+- *info_node.py*: the window where the robot's information will be printed.
+
+Useful commands:
+------------------
+
 If you want to read the service's value (reached ad cancelled goals), run the command:
 
 > rosservice call /goals_srv
