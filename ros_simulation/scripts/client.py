@@ -1,5 +1,26 @@
 #! /usr/bin/env python
 
+## @package ros_simulation
+# \file client.py
+# \brief This module provides a ROS client that subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates.
+# \author Galvagni Gianluca
+# \version 0.1
+# \date 14/03/2023
+#
+# \details
+#
+# Subscribes to: <BR>
+#   - '/odom': Topic where there are the real robot coordinates.
+#
+# Publishes to: <BR>
+#	- '/msg/Pos: Where write the (x,y) coordinates and the velocities (vx and vy).
+#	- '/goal_topic' (geometry_msgs/Point) : User's desired position.
+#	
+# Service: <BR>
+#   [None]
+#
+##
+
 import rospy
 import math
 import sys
@@ -13,8 +34,20 @@ from std_srvs.srv import *
 from geometry_msgs.msg import Point, Pose, Twist
 from ros_simulation.msg import Pos
 
+##
+# \class GoalCounter
+# \brief ROS client class.
+#
+# This class subscribes to odometry information, publishes position and velocity information, 
+# 	sends goals to the action server, and listens for user input to set the goal coordinates.
 class Client:
 
+	##
+	# \brief Initializes the ROS client class.
+	#
+	# This function initializes the ROS client class by setting two variables with null values, 
+	# 	creating a publisher to publish position information, creating a subscriber to listen for odometry information, 
+	# 	creating an action client for the reaching_goal, and waiting for the action server to come usable.
 	def __init__(self):
 		# Set two variables with a null value
 		self.position = None
@@ -38,7 +71,12 @@ class Client:
 		# Create a publisher to send the target
 		self.goal_pub = rospy.Publisher('/goal_topic', Point, queue_size = 1)
 		
-
+	##
+	# \brief Stores the odometrys' informations.
+	# \param data: Odometry message.
+	#
+	# This function stores the position and linear velocity information from the odometry message 
+	# 	and creates a new message to publish position and velocity information.
 	def odom_callback(self, data):
 		# Store the position and linear velocity information from the odometry message
 		self.position = data.pose.pose.position
@@ -54,9 +92,12 @@ class Client:
 		# Publish the message
 		self.pub.publish(msg)
 		
-		
+	##
+	# \brief Listens for the user input to set the goal coordinates and sends this information.
+	#
+	# This function listens for user input to set the goal coordinates, sends the goal to the action server and to the message, 
+	# 	and cancels the goal if the user input is 'c'.	
 	def goal_input(self):
-		
 		print("Insert the goal coordinates (x,y) or type 'c' to cancel the goal, then press ENTER:")
 		
 		# infinite loop for listen the user's input
