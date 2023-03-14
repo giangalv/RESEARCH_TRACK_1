@@ -10,13 +10,13 @@
 # \details
 #
 # Subscribes to: 
-#   - /reaching_goal/result: topic that publishes the result of a goal reached or cancelled.
+#   - '/reaching_goal/result': topic that publishes the result of a goal reached or cancelled.
 #
 # Publishes to: 
 #   [None]
 #
 # Service: 
-#   - /goals_srv: service that returns the number of goals reached and cancelled.
+#   - '/goals_srv': service that returns the number of goals reached and cancelled.
 #
 ##
 

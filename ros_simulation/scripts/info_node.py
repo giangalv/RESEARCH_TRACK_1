@@ -12,7 +12,7 @@
 # \details
 #
 # Subscribes to: <BR>
-#	- 'msg/Pos': Odometry information.
+#	- '/msg/Pos': Odometry information.
 #	- '/goal_topic' (geometry_msgs/Point) : Desired position to reach.
 #
 # Publishes to: <BR>

@@ -13,7 +13,7 @@
 #   - '/odom': Topic where there are the real robot coordinates.
 #
 # Publishes to: <BR>
-#	- '/msg/Pos: Where write the (x,y) coordinates and the velocities (vx and vy).
+#	- '/msg/Pos': Where write the (x,y) coordinates and the velocities (vx and vy).
 #	- '/goal_topic' (geometry_msgs/Point) : User's desired position.
 #	
 # Service: <BR>
