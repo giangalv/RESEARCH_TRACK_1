@@ -16,7 +16,7 @@ It is also required to create a launch file to start the simulation (assignment1
 Documentation:
 ----------------
 
-Here there is the [Doxygen documentation.](https://github.com/giangalv/RESEARCH_TRACK_1/ros_simulation/docs/html/index.html)
+Here there is the Doxygen documentation: file:///home/giangalv/Documents/GitHub/RESEARCH_TRACK_1/ros_simulation/docs/html/index.html
 
 Installing and running:
 -----------------------
