@@ -2,7 +2,7 @@
 
 ## @package ros_simulation
 # \file goals_srv.py
-# \brief This is a ROS node that provides a service to return the number of goals reached and cancelled by the action server.
+# \brief Provides a service to return the number of goals reached and cancelled by the action server.
 # \author Galvagni Gianluca
 # \version 0.1
 # \date 14/03/2023

@@ -2,7 +2,7 @@
 
 ## @package ros_simulation
 # \file client.py
-# \brief This module provides a ROS client that subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates.
+# \brief Provides a ROS client that subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates.
 # \author Galvagni Gianluca
 # \version 0.1
 # \date 14/03/2023

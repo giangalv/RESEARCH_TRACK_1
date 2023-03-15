@@ -2,9 +2,7 @@
 
 ##
 # \file info_node.py
-# \brief This node subscribes to odometry information, publishes position and velocity information,
-#	sends goals to the action server, and listens for user input to set the goal coordinates. It calculates the distance
-#	from the desired position and the average velocity, and logs this information at a specified frequency.
+# \brief Subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates. It calculates the distance from the desired position and the average velocity, and logs this information at a specified frequency.
 # \author Galvagni Gianluca
 # \version 0.1
 # \date 14/03/2023
@@ -37,7 +35,7 @@ from geometry_msgs.msg import Point
 class InfoNode:
 
 	##
-	# \brief Constructor for InfoNode class
+	# \brief Constructor for InfoNode class.
 	#
 	# This function initializes the InfoNode class and its variables. It gets the publish frequency and initializes the target 
 	# position variables to their default values. It also subscribes to the /goal_topic and /pos topics.
