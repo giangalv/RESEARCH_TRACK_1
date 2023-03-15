@@ -1,0 +1,44 @@
+\hypertarget{info__node_8py}{}\doxysection{info\+\_\+node.\+py File Reference}
+\label{info__node_8py}\index{info\_node.py@{info\_node.py}}
+
+
+Subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classinfo__node_1_1_info_node}{info\+\_\+node.\+Info\+Node}}
+\begin{DoxyCompactList}\small\item\em ROS node to the robots\textquotesingle{} information (x,y,vx and vy) and prints the distance between robot and target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{info__node_8py_a3f42e2592e18afce3b394455fd24ee0c}\label{info__node_8py_a3f42e2592e18afce3b394455fd24ee0c}} 
+def {\bfseries info\+\_\+node.\+main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates. 
+
+It calculates the distance from the desired position and the average velocity, and logs this information at a specified frequency. \begin{DoxyAuthor}{Author}
+Galvagni Gianluca 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/03/2023
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+
+\begin{DoxyItemize}
+\item \textquotesingle{}/msg/\+Pos\textquotesingle{}\+: Odometry information.
+\item \textquotesingle{}/goal\+\_\+topic\textquotesingle{} (geometry\+\_\+msgs/\+Point) \+: Desired position to reach.
+\end{DoxyItemize}
+
+Publishes to\+: ~\newline
+ \mbox{[}None\mbox{]}
+
+Services\+: ~\newline
+ \mbox{[}None\mbox{]} 

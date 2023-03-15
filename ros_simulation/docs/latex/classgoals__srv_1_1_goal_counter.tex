@@ -1,0 +1,81 @@
+\hypertarget{classgoals__srv_1_1_goal_counter}{}\doxysection{goals\+\_\+srv.\+Goal\+Counter Class Reference}
+\label{classgoals__srv_1_1_goal_counter}\index{goals\_srv.GoalCounter@{goals\_srv.GoalCounter}}
+
+
+Counts the goals reached and cancelled.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_a4d885baed0248e193294c6b0dc9d6682}\label{classgoals__srv_1_1_goal_counter_a4d885baed0248e193294c6b0dc9d6682}} 
+def \mbox{\hyperlink{classgoals__srv_1_1_goal_counter_a4d885baed0248e193294c6b0dc9d6682}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Initializes the \mbox{\hyperlink{classgoals__srv_1_1_goal_counter}{Goal\+Counter}} class and sets the initial values of the reached and cancelled variables to zero. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgoals__srv_1_1_goal_counter_a54db77b68bcc46abec7a2f6c28808265}{callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Callback function for the /reaching\+\_\+goal/result topic subscription. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classgoals__srv_1_1_goal_counter_abcb360a9f13467f9347b02f12d0f30d5}{get\+\_\+goals}} (self, req)
+\begin{DoxyCompactList}\small\item\em Service function to return the number of goals reached and cancelled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_a036e36428b5f6566a71996a10aad72e6}\label{classgoals__srv_1_1_goal_counter_a036e36428b5f6566a71996a10aad72e6}} 
+{\bfseries reached}
+\item 
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_ab5b1f000b4133584035f159fefc1582d}\label{classgoals__srv_1_1_goal_counter_ab5b1f000b4133584035f159fefc1582d}} 
+{\bfseries cancelled}
+\item 
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_a81bc6eac0c5840787f80f78830aa378e}\label{classgoals__srv_1_1_goal_counter_a81bc6eac0c5840787f80f78830aa378e}} 
+{\bfseries goals\+\_\+srv}
+\item 
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_a261ed0da105dc2bff11b43cc1fe9aba2}\label{classgoals__srv_1_1_goal_counter_a261ed0da105dc2bff11b43cc1fe9aba2}} 
+{\bfseries action\+\_\+sub}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Counts the goals reached and cancelled. 
+
+\hypertarget{classgoals__srv_1_1_goal_counter_autotoc_md0}{}\doxysubsection{This class counts the number of goals reached and cancelled by subscribing to the /reaching\+\_\+goal/result topic,}\label{classgoals__srv_1_1_goal_counter_autotoc_md0}
+and provides a service to return these values. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_a54db77b68bcc46abec7a2f6c28808265}\label{classgoals__srv_1_1_goal_counter_a54db77b68bcc46abec7a2f6c28808265}} 
+\index{goals\_srv.GoalCounter@{goals\_srv.GoalCounter}!callback@{callback}}
+\index{callback@{callback}!goals\_srv.GoalCounter@{goals\_srv.GoalCounter}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily def goals\+\_\+srv.\+Goal\+Counter.\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Callback function for the /reaching\+\_\+goal/result topic subscription. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & The message received from the topic subscription.\\
+\hline
+\end{DoxyParams}
+This function updates the values of the reached and cancelled variables based on the status of the received goal. ~\newline
+ \mbox{\Hypertarget{classgoals__srv_1_1_goal_counter_abcb360a9f13467f9347b02f12d0f30d5}\label{classgoals__srv_1_1_goal_counter_abcb360a9f13467f9347b02f12d0f30d5}} 
+\index{goals\_srv.GoalCounter@{goals\_srv.GoalCounter}!get\_goals@{get\_goals}}
+\index{get\_goals@{get\_goals}!goals\_srv.GoalCounter@{goals\_srv.GoalCounter}}
+\doxysubsubsection{\texorpdfstring{get\_goals()}{get\_goals()}}
+{\footnotesize\ttfamily def goals\+\_\+srv.\+Goal\+Counter.\+get\+\_\+goals (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{req }\end{DoxyParamCaption})}
+
+
+
+Service function to return the number of goals reached and cancelled. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em req} & The service request (which is not used in this case). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Goals\+Response\+: A message containing the values of the reached and cancelled variables.
+\end{DoxyReturn}
+This function returns the values of the reached and cancelled variables in a Goals\+Response message. ~\newline
+ 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{goals__srv_8py}{goals\+\_\+srv.\+py}}\end{DoxyCompactItemize}

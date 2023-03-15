@@ -1,0 +1,79 @@
+\hypertarget{classclient_1_1_client}{}\doxysection{client.\+Client Class Reference}
+\label{classclient_1_1_client}\index{client.Client@{client.Client}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classclient_1_1_client_a788a2f7ee5bd43279123c7ccea1476f3}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Initializes the ROS client class. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclient_1_1_client_a81dda9de6359fbd7bce762f93722b537}{odom\+\_\+callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Stores the odometrys\textquotesingle{} informations. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classclient_1_1_client_a2cb07496dcd7a70363f28a330883c747}{goal\+\_\+input}} (self)
+\begin{DoxyCompactList}\small\item\em Listens for the user input to set the goal coordinates and sends this information. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_ae424d2c3689e072933403bfe517b8a44}\label{classclient_1_1_client_ae424d2c3689e072933403bfe517b8a44}} 
+{\bfseries position}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_a4e1594b36a9a3055141c299f4e1ff7eb}\label{classclient_1_1_client_a4e1594b36a9a3055141c299f4e1ff7eb}} 
+{\bfseries linear\+\_\+velocity}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_a52662c83cc67c9ce473ec09db0bef71f}\label{classclient_1_1_client_a52662c83cc67c9ce473ec09db0bef71f}} 
+{\bfseries pub}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_a61b729fc8fc2fb18669e3c0256f8f64d}\label{classclient_1_1_client_a61b729fc8fc2fb18669e3c0256f8f64d}} 
+{\bfseries action\+\_\+client}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_ae7c9011cd492d4c4d588e507c9f57488}\label{classclient_1_1_client_ae7c9011cd492d4c4d588e507c9f57488}} 
+{\bfseries goal}
+\item 
+\mbox{\Hypertarget{classclient_1_1_client_a17c69cf07aa6cd96ca23ae652a827aa0}\label{classclient_1_1_client_a17c69cf07aa6cd96ca23ae652a827aa0}} 
+{\bfseries goal\+\_\+pub}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classclient_1_1_client_a788a2f7ee5bd43279123c7ccea1476f3}\label{classclient_1_1_client_a788a2f7ee5bd43279123c7ccea1476f3}} 
+\index{client.Client@{client.Client}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!client.Client@{client.Client}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def client.\+Client.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Initializes the ROS client class. 
+
+This function initializes the ROS client class by setting two variables with null values, creating a publisher to publish position information, creating a subscriber to listen for odometry information, creating an action client for the reaching\+\_\+goal, and waiting for the action server to come usable. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classclient_1_1_client_a2cb07496dcd7a70363f28a330883c747}\label{classclient_1_1_client_a2cb07496dcd7a70363f28a330883c747}} 
+\index{client.Client@{client.Client}!goal\_input@{goal\_input}}
+\index{goal\_input@{goal\_input}!client.Client@{client.Client}}
+\doxysubsubsection{\texorpdfstring{goal\_input()}{goal\_input()}}
+{\footnotesize\ttfamily def client.\+Client.\+goal\+\_\+input (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Listens for the user input to set the goal coordinates and sends this information. 
+
+This function listens for user input to set the goal coordinates, sends the goal to the action server and to the message, and cancels the goal if the user input is \textquotesingle{}c\textquotesingle{}. ~\newline
+ \mbox{\Hypertarget{classclient_1_1_client_a81dda9de6359fbd7bce762f93722b537}\label{classclient_1_1_client_a81dda9de6359fbd7bce762f93722b537}} 
+\index{client.Client@{client.Client}!odom\_callback@{odom\_callback}}
+\index{odom\_callback@{odom\_callback}!client.Client@{client.Client}}
+\doxysubsubsection{\texorpdfstring{odom\_callback()}{odom\_callback()}}
+{\footnotesize\ttfamily def client.\+Client.\+odom\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Stores the odometrys\textquotesingle{} informations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Odometry message.\\
+\hline
+\end{DoxyParams}
+This function stores the position and linear velocity information from the odometry message and creates a new message to publish position and velocity information. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{client_8py}{client.\+py}}\end{DoxyCompactItemize}

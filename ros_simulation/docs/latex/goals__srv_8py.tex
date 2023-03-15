@@ -1,0 +1,43 @@
+\hypertarget{goals__srv_8py}{}\doxysection{goals\+\_\+srv.\+py File Reference}
+\label{goals__srv_8py}\index{goals\_srv.py@{goals\_srv.py}}
+
+
+Provides a service to return the number of goals reached and cancelled by the action server.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classgoals__srv_1_1_goal_counter}{goals\+\_\+srv.\+Goal\+Counter}}
+\begin{DoxyCompactList}\small\item\em Counts the goals reached and cancelled. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{goals__srv_8py_a95d2c8e58420d5c4682b56fe891eb457}\label{goals__srv_8py_a95d2c8e58420d5c4682b56fe891eb457}} 
+def {\bfseries goals\+\_\+srv.\+main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a service to return the number of goals reached and cancelled by the action server. 
+
+\begin{DoxyAuthor}{Author}
+Galvagni Gianluca 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/03/2023
+\end{DoxyDate}
+Subscribes to\+:
+\begin{DoxyItemize}
+\item \textquotesingle{}/reaching\+\_\+goal/result\textquotesingle{}\+: topic that publishes the result of a goal reached or cancelled.
+\end{DoxyItemize}
+
+Publishes to\+: \mbox{[}None\mbox{]}
+
+Service\+:
+\begin{DoxyItemize}
+\item \textquotesingle{}/goals\+\_\+srv\textquotesingle{}\+: service that returns the number of goals reached and cancelled. 
+\end{DoxyItemize}

@@ -1,0 +1,47 @@
+\hypertarget{client_8py}{}\doxysection{client.\+py File Reference}
+\label{client_8py}\index{client.py@{client.py}}
+
+
+Provides a ROS client that subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classclient_1_1_client}{client.\+Client}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{client_8py_a18d2f0bd3df369370bdb40b86fe2892b}\label{client_8py_a18d2f0bd3df369370bdb40b86fe2892b}} 
+def {\bfseries client.\+main} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides a ROS client that subscribes to odometry information, publishes position and velocity information, sends goals to the action server, and listens for user input to set the goal coordinates. 
+
+\begin{DoxyAuthor}{Author}
+Galvagni Gianluca 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+14/03/2023
+\end{DoxyDate}
+Subscribes to\+: ~\newline
+
+\begin{DoxyItemize}
+\item \textquotesingle{}/odom\textquotesingle{}\+: Topic where there are the real robot coordinates.
+\end{DoxyItemize}
+
+Publishes to\+: ~\newline
+
+\begin{DoxyItemize}
+\item \textquotesingle{}/msg/\+Pos\textquotesingle{}\+: Where write the (x,y) coordinates and the velocities (vx and vy).
+\item \textquotesingle{}/goal\+\_\+topic\textquotesingle{} (geometry\+\_\+msgs/\+Point) \+: User\textquotesingle{}s desired position.
+\end{DoxyItemize}
+
+Service\+: ~\newline
+ \mbox{[}None\mbox{]} 

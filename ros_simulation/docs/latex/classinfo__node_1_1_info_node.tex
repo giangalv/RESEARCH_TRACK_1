@@ -1,0 +1,90 @@
+\hypertarget{classinfo__node_1_1_info_node}{}\doxysection{info\+\_\+node.\+Info\+Node Class Reference}
+\label{classinfo__node_1_1_info_node}\index{info\_node.InfoNode@{info\_node.InfoNode}}
+
+
+ROS node to the robots\textquotesingle{} information (x,y,vx and vy) and prints the distance between robot and target.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \mbox{\hyperlink{classinfo__node_1_1_info_node_a54ca6e152b573fc93e8616bb5994c4a2}{\+\_\+\+\_\+init\+\_\+\+\_\+}} (self)
+\begin{DoxyCompactList}\small\item\em Constructor for \mbox{\hyperlink{classinfo__node_1_1_info_node}{Info\+Node}} class. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classinfo__node_1_1_info_node_a619aa7668315b0a54773f9d6b23913e5}{goal\+\_\+callback}} (self, msg)
+\begin{DoxyCompactList}\small\item\em Callback function for goal topic subscriber. \end{DoxyCompactList}\item 
+def \mbox{\hyperlink{classinfo__node_1_1_info_node_adc9e073fa81ca493741ab335604c8260}{callback}} (self, data)
+\begin{DoxyCompactList}\small\item\em Callback function for pos subscriber. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_ac6e07c13284ac42a7af68414419c85b5}\label{classinfo__node_1_1_info_node_ac6e07c13284ac42a7af68414419c85b5}} 
+{\bfseries frequency}
+\item 
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_a5b95ae9bb9379d0e20c7282bec9a4a7c}\label{classinfo__node_1_1_info_node_a5b95ae9bb9379d0e20c7282bec9a4a7c}} 
+{\bfseries old\+\_\+time}
+\item 
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_af59fe2319ccf9cbdfcba6acf731070d7}\label{classinfo__node_1_1_info_node_af59fe2319ccf9cbdfcba6acf731070d7}} 
+{\bfseries des\+\_\+x}
+\item 
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_a6441ce9e695782d459a4a22f9414aad2}\label{classinfo__node_1_1_info_node_a6441ce9e695782d459a4a22f9414aad2}} 
+{\bfseries des\+\_\+y}
+\item 
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_a8b3e9091fe43ba1c3a9d118a80f496af}\label{classinfo__node_1_1_info_node_a8b3e9091fe43ba1c3a9d118a80f496af}} 
+{\bfseries sub}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+ROS node to the robots\textquotesingle{} information (x,y,vx and vy) and prints the distance between robot and target. 
+
+This class subscribes to odometry information, sends goals to the action server and listens for user input to set the goal coordinates. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_a54ca6e152b573fc93e8616bb5994c4a2}\label{classinfo__node_1_1_info_node_a54ca6e152b573fc93e8616bb5994c4a2}} 
+\index{info\_node.InfoNode@{info\_node.InfoNode}!\_\_init\_\_@{\_\_init\_\_}}
+\index{\_\_init\_\_@{\_\_init\_\_}!info\_node.InfoNode@{info\_node.InfoNode}}
+\doxysubsubsection{\texorpdfstring{\_\_init\_\_()}{\_\_init\_\_()}}
+{\footnotesize\ttfamily def info\+\_\+node.\+Info\+Node.\+\_\+\+\_\+init\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{}]{self }\end{DoxyParamCaption})}
+
+
+
+Constructor for \mbox{\hyperlink{classinfo__node_1_1_info_node}{Info\+Node}} class. 
+
+This function initializes the \mbox{\hyperlink{classinfo__node_1_1_info_node}{Info\+Node}} class and its variables. It gets the publish frequency and initializes the target position variables to their default values. It also subscribes to the /goal\+\_\+topic and /pos topics. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classinfo__node_1_1_info_node_adc9e073fa81ca493741ab335604c8260}\label{classinfo__node_1_1_info_node_adc9e073fa81ca493741ab335604c8260}} 
+\index{info\_node.InfoNode@{info\_node.InfoNode}!callback@{callback}}
+\index{callback@{callback}!info\_node.InfoNode@{info\_node.InfoNode}}
+\doxysubsubsection{\texorpdfstring{callback()}{callback()}}
+{\footnotesize\ttfamily def info\+\_\+node.\+Info\+Node.\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{data }\end{DoxyParamCaption})}
+
+
+
+Callback function for pos subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & A Pos message containing the current position and velocity information.\\
+\hline
+\end{DoxyParams}
+This function is the callback for the /pos subscriber. It calculates the Euclidean distance between the current position and the desired position, as well as the average velocity, and prints this information if enough time has passed since the last print. \mbox{\Hypertarget{classinfo__node_1_1_info_node_a619aa7668315b0a54773f9d6b23913e5}\label{classinfo__node_1_1_info_node_a619aa7668315b0a54773f9d6b23913e5}} 
+\index{info\_node.InfoNode@{info\_node.InfoNode}!goal\_callback@{goal\_callback}}
+\index{goal\_callback@{goal\_callback}!info\_node.InfoNode@{info\_node.InfoNode}}
+\doxysubsubsection{\texorpdfstring{goal\_callback()}{goal\_callback()}}
+{\footnotesize\ttfamily def info\+\_\+node.\+Info\+Node.\+goal\+\_\+callback (\begin{DoxyParamCaption}\item[{}]{self,  }\item[{}]{msg }\end{DoxyParamCaption})}
+
+
+
+Callback function for goal topic subscriber. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em msg} & A Point message containing the goal coordinates.\\
+\hline
+\end{DoxyParams}
+This function is the callback for the /goal\+\_\+topic subscriber. It updates the target position variables with the values received in the message. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{info__node_8py}{info\+\_\+node.\+py}}\end{DoxyCompactItemize}
